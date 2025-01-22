@@ -102,7 +102,7 @@ import StudentRoute from "./StudentRoute";
         },
         {
           path: '/dashboard/my-class/:id',
-          element: <TeacherRoute><ClassSeeDetails></ClassSeeDetails></TeacherRoute>
+          element: <ClassSeeDetails></ClassSeeDetails>
         },
         {
           path:"/dashboard/myenroll-class/:classId" ,

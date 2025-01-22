@@ -187,6 +187,19 @@
 
 // export default MyClasses;
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 import React, { useState } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import Swal from 'sweetalert2';
@@ -256,7 +269,7 @@ const MyClasses = () => {
   };
 
   // Pagination logic
-  const itemsPerPage = 3; // Number of classes per page
+  const itemsPerPage = 10; // Number of classes per page
   const pageCount = Math.ceil(classes.length / itemsPerPage);
 
   // Calculate classes for the current page
@@ -273,44 +286,51 @@ const MyClasses = () => {
     <div className="p-4 ">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
         {currentClasses.map((cls) => (
-          <div key={cls._id} className="p-4 border  shadow-xl rounded-xl">
-            <img src={cls.image} alt={cls.title} className="w-full h-48 object-cover rounded" />
-            <h3 className="text-xl font-bold mt-2">{cls.title}</h3>
-            <p>Teacher: {cls.name}</p>
-            <p>Email: {cls.email}</p>
-            <p>Price: ${cls.price}</p>
-            <p>Status: {cls.status}</p>
-            <p>{cls.description}</p>
-            <div className="mt-4 space-x-2 flex">
-              <button
-                className="btn  bg-gray-800 text-white rounded"
-                onClick={() => {
-                  setUpdateClass(cls);
-                  setFormData({
-                    title: cls.title,
-                    price: cls.price,
-                    description: cls.description,
-                    image: cls.image, // Add image to formData
-                  });
-                }}
-              >
-                Update
-              </button>
-              <button
-                className="btn bg-gray-800 text-white rounded"
-                onClick={() => handleDelete(cls)}
-              >
-                Delete
-              </button>
-              <button
-                className={`btn bg-gray-800 text-white rounded ${cls.status !== 'accepted' ? 'opacity-50 cursor-not-allowed' : ''}`}
-                disabled={cls.status !== 'accepted'}
-                onClick={() => navigate(`/dashboard/my-class/${cls._id}`, { state:cls})}
-              >
-                See Details
-              </button>
-            </div>
-          </div>
+ <div key={cls._id} className="p-4 border border-gray-200 shadow-lg rounded-xl bg-white transition-transform transform hover:scale-105 hover:shadow-xl">
+ <img src={cls.image} alt={cls.title} className="w-full h-48 object-cover rounded-t-xl" />
+ <div className="p-4">
+   <h3 className="text-xl font-semibold text-gray-800">{cls.title}</h3>
+   <p className="text-gray-600">Teacher: {cls.name}</p>
+   <p className="text-gray-600">Email: {cls.email}</p>
+   <p className="text-gray-600">Price: <span className="font-semibold">${cls.price}</span></p>
+   <p className={`text-sm ${cls.status === 'accepted' ? 'text-green-500' : 'text-yellow-500'}`}>
+     Status: {cls.status}
+   </p>
+   <p className="text-gray-500 text-sm mt-2 line-clamp-3">{cls.description}</p>
+ </div>
+ <div className="mt-4 space-x-2 flex">
+   <button
+     className="btn bg-gray-800 text-white text-sm rounded-lg hover:bg-gray-700 transition duration-300"
+     onClick={() => {
+       setUpdateClass(cls);
+       setFormData({
+         title: cls.title,
+         price: cls.price,
+         description: cls.description,
+         image: cls.image,
+       });
+     }}
+   >
+     Update
+   </button>
+   <button
+     className="btn bg-red-600 text-white text-sm rounded-lg hover:bg-red-500 transition duration-300"
+     onClick={() => handleDelete(cls)}
+   >
+     Delete
+   </button>
+   <button
+     className={`btn text-sm ${cls.status !== 'accepted' ? 'bg-gray-500 cursor-not-allowed' : 'bg-blue-500 text-white'} rounded-lg hover:bg-blue-400 transition duration-300`}
+     disabled={cls.status !== 'accepted'}
+     onClick={() => navigate(`/dashboard/my-class/${cls._id}`, { state: cls })}
+   >
+     See Details
+   </button>
+ </div>
+</div>
+
+
+          
         ))}
       </div>
 

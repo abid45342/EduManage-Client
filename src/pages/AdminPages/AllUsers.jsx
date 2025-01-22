@@ -5,6 +5,7 @@
 import React, { useState } from 'react';
 import useAxiosSecure from '../../hooks/useAxiosSecure';
 import { useQuery } from '@tanstack/react-query';
+import { toast } from 'react-toastify';
 
 const AllUsers = () => {
   const axiosSecure = useAxiosSecure();
@@ -44,6 +45,7 @@ const AllUsers = () => {
     try {
       await axiosSecure.patch(`/users/role/${userId}`);
       refetch(); // Refresh user list after updating
+      toast.success('User is now an admin');
     } catch (error) {
       console.error('Failed to make admin:', error);
     }

@@ -259,13 +259,13 @@ const AllClassesRequest = () => {
                   <div className="flex gap-4">
                     <button
                       onClick={() => handleApprove(classItem._id)}
-                      className="btn-approve"
+                      className="btn"
                     >
                       Approve
                     </button>
                     <button
                       onClick={() => handleReject(classItem._id)}
-                      className="btn-reject"
+                      className="btn "
                     >
                       Reject
                     </button>
@@ -281,7 +281,7 @@ const AllClassesRequest = () => {
               </td>
               <td className="  p-2">
                 <button
-                  className={`btn-progress ${
+                  className={`btn ${
                     classItem.status === 'accepted'
                       ? ''
                       : 'btn-disabled'

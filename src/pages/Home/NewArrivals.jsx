@@ -114,7 +114,7 @@ const NewArrivals = () => {
             classDetails: {
                 title: 'Web Development Bootcamp',
                 description: 'Learn full-stack web development from scratch.',
-                image: 'https://images.unsplash.com/photo-1593642532973-d31b6557fa68?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg0OHwwfDF8c2VhY2h8MnwxfGZ1bmN0aW9uYWx8ZW58MHx8fHx8&ixlib=rb-1.2.1&q=80&w=1080',
+                image: 'https://i.ibb.co.com/X2VRmTZ/image.png',
             },
         },
         {
@@ -122,7 +122,7 @@ const NewArrivals = () => {
             classDetails: {
                 title: 'Data Science for Beginners',
                 description: 'Dive into the world of data science with hands-on.',
-                image: 'https://images.unsplash.com/photo-1593642532973-d31b6557fa68?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg0OHwwfDF8c2VhY2h8MnwxfGZ1bmN0aW9uYWx8ZW58MHx8fHx8&ixlib=rb-1.2.1&q=80&w=1080',
+                image: 'https://i.ibb.co.com/cYvwfQX/image.png',
             },
         },
         {
@@ -130,7 +130,7 @@ const NewArrivals = () => {
             classDetails: {
                 title: 'UI/UX Design Fundamentals',
                 description: 'Learn design principles and create user-friendly.',
-                image: 'https://images.unsplash.com/photo-1593642532973-d31b6557fa68?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg0OHwwfDF8c2VhY2h8MnwxfGZ1bmN0aW9uYWx8ZW58MHx8fHx8&ixlib=rb-1.2.1&q=80&w=1080',
+                image: 'https://i.ibb.co.com/fqh4mFv/image.png',
             },
         },
         {
@@ -138,7 +138,7 @@ const NewArrivals = () => {
             classDetails: {
                 title: 'Python Programming 101',
                 description: 'Start your journey into programming with Python.',
-                image: 'https://images.unsplash.com/photo-1593642532973-d31b6557fa68?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg0OHwwfDF8c2VhY2h8MnwxfGZ1bmN0aW9uYWx8ZW58MHx8fHx8&ixlib=rb-1.2.1&q=80&w=1080',
+                image: 'https://i.ibb.co.com/bQcxKQN/image.png',
             },
         },
         {
@@ -146,7 +146,7 @@ const NewArrivals = () => {
             classDetails: {
                 title: 'Mobile App Development',
                 description: 'Build mobile apps with React Native and Expo.',
-                image: 'https://images.unsplash.com/photo-1593642532973-d31b6557fa68?crop=entropy&cs=tinysrgb&fit=max&ixid=MXwyMDg0OHwwfDF8c2VhY2h8MnwxfGZ1bmN0aW9uYWx8ZW58MHx8fHx8&ixlib=rb-1.2.1&q=80&w=1080',
+                image: 'https://i.ibb.co.com/TBwPhxd/image.png',
             },
         },
     ];
@@ -180,7 +180,7 @@ const NewArrivals = () => {
                                 <img
                                     src={classItem.classDetails.image || 'https://via.placeholder.com/300x200.png?text=Default+Image'}
                                     alt={classItem.classDetails.title}
-                                    className="w-full h-full object-cover"
+                                    className="w-full h-full "
                                 />
                             </div>
                             <div className="mt-4 text-center">

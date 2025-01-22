@@ -136,7 +136,7 @@
 
 
 import React, { useState } from 'react';
-import { FaAd, FaCalendar, FaEnvelope, FaHome, FaList, FaSearch, FaShoppingCart, FaUsers, FaUtensils } from 'react-icons/fa';
+import { FaAd, FaAddressBook, FaBookOpen, FaCalendar, FaChalkboard, FaClipboardList, FaEnvelope, FaHome, FaList, FaPlusSquare, FaSearch, FaShoppingCart, FaUserCheck, FaUserCircle, FaUsers, FaUtensils } from 'react-icons/fa';
 import { NavLink, Outlet } from 'react-router-dom';
 
 import useRole from '../hooks/useRole';
@@ -169,22 +169,22 @@ const Dashboard = () => {
                         <>
                             <li>
                                 <NavLink to="/dashboard/teacherRequest">
-                                    <FaHome /> {isSidebarMinimized ? '' : 'Teacher Request'}
+                                    <FaUserCheck /> {isSidebarMinimized ? '' : 'Teacher Request'}
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="/dashboard/classReq">
-                                    <FaList /> {isSidebarMinimized ? '' : 'All Classes'}
+                                    <FaChalkboard /> {isSidebarMinimized ? '' : 'All Classes'}
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="/dashboard/myProfile">
-                                    <FaUtensils /> {isSidebarMinimized ? '' : 'My Profile'}
+                                    <FaUserCircle /> {isSidebarMinimized ? '' : 'My Profile'}
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="/dashboard/users">
-                                    <FaUsers /> {isSidebarMinimized ? '' : 'All Users'}
+                                    <FaAddressBook /> {isSidebarMinimized ? '' : 'All Users'}
                                 </NavLink>
                             </li>
                         </>
@@ -193,17 +193,17 @@ const Dashboard = () => {
                         <>
                             <li>
                                 <NavLink to="/dashboard/addClass">
-                                    <FaHome /> {isSidebarMinimized ? '' : 'Add Class'}
+                                    <FaPlusSquare /> {isSidebarMinimized ? '' : 'Add Class'}
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="/dashboard/myClass">
-                                    <FaList /> {isSidebarMinimized ? '' : 'My Class'}
+                                    <FaClipboardList /> {isSidebarMinimized ? '' : 'My Class'}
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="/dashboard/myProfile">
-                                    <FaUtensils /> {isSidebarMinimized ? '' : 'My Profile'}
+                                    <FaUserCircle /> {isSidebarMinimized ? '' : 'My Profile'}
                                 </NavLink>
                             </li>
                         </>
@@ -212,12 +212,12 @@ const Dashboard = () => {
                         <>
                             <li>
                                 <NavLink to="/dashboard/myEnroll">
-                                    <FaHome /> {isSidebarMinimized ? '' : 'My Enrolled Class'}
+                                    <FaBookOpen /> {isSidebarMinimized ? '' : 'My Enrolled Class'}
                                 </NavLink>
                             </li>
                             <li>
                                 <NavLink to="/dashboard/myProfile">
-                                    <FaUtensils /> {isSidebarMinimized ? '' : 'My Profile'}
+                                    <FaUserCircle /> {isSidebarMinimized ? '' : 'My Profile'}
                                 </NavLink>
                             </li>
                         </>
