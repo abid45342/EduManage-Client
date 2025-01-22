@@ -6,7 +6,7 @@
 
 ## Admin Credentials
 - **Username**: `admin`
-- **Password**: `admin123`
+- **Password**: `123456`
 
 ---
 
