@@ -51,7 +51,7 @@ const Feedback = () => {
 
     return (
         <div className="feedback-section">
-            <h2 className="feedback-title">Teacher' Feedback</h2>
+            <h2 className="feedback-title">Teacher's Feedback</h2>
             <Slider {...settings}>
                 {feedbacks.map((feedback) => (
                     <div key={feedback.id} className="feedback-card ">
