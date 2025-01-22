@@ -75,7 +75,7 @@ const Partners = () => {
               alt="Real Estate Partner"
               className="mx-auto w-32 h-auto object-contain hover:opacity-90 transition-opacity duration-300"
             />
-            <p className="mt-2 text-gray-700">Leaders in Programming  development</p>
+            <p className="mt-2 text-gray-600">Leaders in Programming  development</p>
           </div>
 
           <div className="text-center">
