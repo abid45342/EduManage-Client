@@ -1,5 +1,6 @@
 # 🎉 EduManage
 🚀 **Live Demo**: [EduManage](https://crowd-funding-3cd40.web.app/) 
+
 **EduManage** is a modern educational management platform designed to streamline administrative tasks, enhance collaboration, and improve the overall learning experience.
 
 ---
