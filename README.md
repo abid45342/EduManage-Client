@@ -1,5 +1,5 @@
-# EduManage
-
+# 🎉 EduManage
+🚀 **Live Demo**: [EduManage](https://crowd-funding-3cd40.web.app/) 
 **EduManage** is a modern educational management platform designed to streamline administrative tasks, enhance collaboration, and improve the overall learning experience.
 
 ---
@@ -7,11 +7,6 @@
 ## Admin Credentials
 - **Username**: `admin`
 - **Password**: `123456`
-
----
-
-## Live Site URL
-[Visit EduManage Live]: https://edumanage-f25f6.web.app/
 
 ---
 
@@ -56,8 +51,60 @@
 - **Other Libraries**: React Router, Axios, SweetAlert2, React Hook Form
 
 ---
+## 🧑‍💻 Used Dependencies 
+```json
+ "dependencies": {
+        "@stripe/react-stripe-js": "^3.1.1",
+        "@stripe/stripe-js": "^5.5.0",
+        "@tanstack/react-query": "^5.64.1",
+        "axios": "^1.7.9",
+        "firebase": "^11.1.0",
+        "localforage": "^1.10.0",
+        "match-sorter": "^8.0.0",
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1",
+        "react-hook-form": "^7.54.2",
+        "react-icons": "^5.4.0",
+        "react-paginate": "^8.2.0",
+        "react-router-dom": "^7.1.1",
+        "react-slick": "^0.30.3",
+        "react-stars": "^2.2.5",
+        "react-toastify": "^11.0.3",
+        "slick-carousel": "^1.8.1",
+        "sort-by": "^1.2.0",
+        "sweetalert2": "^11.15.10"
+      },
+```
+---
 
-## Getting Started
-1. Clone the repository:  
-   ```bash
-   git clone https://github.com/your-repo-url.git
+# 🚀 Local Installation Guide
+
+## **1️⃣ Clone the Repository**  
+```sh
+git clone https://github.com/abid45342/EduManage-Client.git
+cd CrowdFunding-Client 
+```
+## **2️⃣ Install Dependencies**
+```sh
+npm install
+```
+## **3️⃣ Configure Environment Variables**
+```sh
+REACT_APP_FIREBASE_API_KEY=your_firebase_api_key
+REACT_APP_FIREBASE_AUTH_DOMAIN=your_firebase_auth_domain
+REACT_APP_FIREBASE_PROJECT_ID=your_firebase_project_id
+REACT_APP_FIREBASE_STORAGE_BUCKET=your_firebase_storage_bucket
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID=your_firebase_messaging_sender_id
+REACT_APP_FIREBASE_APP_ID=your_firebase_app_id
+```
+## **4️⃣ Run the Project Locally**
+```sh
+npm run dev
+```
+
+
+
+
+
+
+
