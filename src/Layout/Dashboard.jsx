@@ -187,6 +187,12 @@ const Dashboard = () => {
                                     <FaAddressBook /> {isSidebarMinimized ? '' : 'All Users'}
                                 </NavLink>
                             </li>
+
+                            <li>
+                                <NavLink to="/dashboard/overview">
+                                    <FaAddressBook /> {isSidebarMinimized ? '' : 'Stats'}
+                                </NavLink>
+                            </li>
                         </>
                     )}
                     {role === 'teacher' && (
@@ -206,6 +212,11 @@ const Dashboard = () => {
                                     <FaUserCircle /> {isSidebarMinimized ? '' : 'My Profile'}
                                 </NavLink>
                             </li>
+                            <li>
+                                <NavLink to="/dashboard/overview">
+                                    <FaAddressBook /> {isSidebarMinimized ? '' : 'Stats'}
+                                </NavLink>
+                            </li>
                         </>
                     )}
                     {role === 'student' && (
@@ -218,6 +229,11 @@ const Dashboard = () => {
                             <li>
                                 <NavLink to="/dashboard/myProfile">
                                     <FaUserCircle /> {isSidebarMinimized ? '' : 'My Profile'}
+                                </NavLink>
+                            </li>
+                            <li>
+                                <NavLink to="/dashboard/overview">
+                                    <FaAddressBook /> {isSidebarMinimized ? '' : 'Stats'}
                                 </NavLink>
                             </li>
                         </>
