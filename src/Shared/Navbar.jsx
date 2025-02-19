@@ -28,12 +28,12 @@ const Navbar = () => {
     <> 
     <li className='font-semibold'><Link to="/">Home</Link></li>
       <li className='font-semibold'><Link  to="/allClasses">All Classes</Link></li>
-      <li className='font-semibold'><Link to="/teacherReq">Teach on EduManage</Link></li>
+{user&&       <li className='font-semibold'><Link to="/teacherReq">Teach on EduManage</Link></li>}
       
       </>
   )
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-base-100 sticky top-0 z-50 shadow-lg">
   <div className="navbar-start">
     <div className="dropdown">
       <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
