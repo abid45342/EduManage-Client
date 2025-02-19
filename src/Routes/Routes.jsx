@@ -27,6 +27,7 @@ import MyProfile from "../pages/MyProfile";
 import TeacherRoute from "./TeacherRoute";
 import StudentRoute from "./StudentRoute";
 import ErrorPage from "../pages/Error";
+import Overview from "../pages/OverView";
 
 
 
@@ -114,6 +115,10 @@ import ErrorPage from "../pages/Error";
 ,{
   path:"/dashboard/myProfile",
   element:<MyProfile></MyProfile>
+},
+{
+  path:"/dashboard/overview",
+  element:<Overview></Overview>
 }
       ]
     },
