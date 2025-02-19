@@ -26,6 +26,8 @@ import MyEnrollClassDetails from "../pages/StudentPages/MyEnrollClassDetails";
 import MyProfile from "../pages/MyProfile";
 import TeacherRoute from "./TeacherRoute";
 import StudentRoute from "./StudentRoute";
+import ErrorPage from "../pages/Error";
+
 
 
 
@@ -119,5 +121,9 @@ import StudentRoute from "./StudentRoute";
     //   path:'dashboard',
     //   element:<PrivateRoute><Dashboard></Dashboard></PrivateRoute>
     // },
+    {
+      path:"*",
+      element:<ErrorPage></ErrorPage>
+    }
 
   ]);
