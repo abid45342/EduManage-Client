@@ -11,6 +11,8 @@ import { useState } from "react";
 import Swal from "sweetalert2";
 import { useLocation, useParams } from "react-router-dom";
 import ReactStars from "react-stars";
+import StudentVideo from "../../components/StudentVideo";
+import ShowVideos from "../../components/ShowVideos";
 // import ReactStars from "react-stars"; // Make sure to import ReactStars if you haven't already
 
 const MyEnrollClassDetails = () => {
@@ -180,7 +182,21 @@ const submitAssignmentMutation = useMutation({
           </div>
         </div>
       )}
+
+
+
+     <div>
+       <StudentVideo  cls_id={classId}></StudentVideo>
+     </div>
+
+
+
+{/* <StudentVideo cls_id={classId}></StudentVideo> */}
+
+
+
     </div>
+   
   );
 };
 

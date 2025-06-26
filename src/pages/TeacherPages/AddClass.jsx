@@ -41,8 +41,10 @@ const AddClass = () => {
             name: user?.name||user?.displayName,
             email: user?.email,
             status: 'pending',
-            AssgnmentCount:0
+            AssgnmentCount:0,
+            modules: [],
         };
+
 
         mutation.mutate(classData);
 

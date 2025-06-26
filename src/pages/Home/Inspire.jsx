@@ -34,7 +34,7 @@ const Inspire = () => {
     const navigate = useNavigate();
     return (
         <div className="my-10 mx-auto w-full px-4">
-            <div className="flex flex-col lg:flex-row justify-center gap-16 items-center">
+            <div className="flex flex-col lg:flex-row justify-center gap-28 items-center">
                 {/* Image Section */}
                 <div className="w-full lg:w-1/2  flex justify-center lg:justify-end">
                     <img className="w-full lg:w-2/3  rounded-badge" src={teacherImg} alt="Instructor" />
@@ -43,8 +43,8 @@ const Inspire = () => {
                 {/* Text Section */}
                 <div className="w-full lg:w-1/2 space-y-4 text-center lg:text-left">
                     <h1 className="text-3xl font-semibold">Become an Instructor</h1>
-                    <p className="w-full lg:w-2/3 mx-auto lg:mx-0 text-gray-600">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam veritatis, natus tenetur eos
+                    <p className="w-full lg:w-2/3 mx-auto lg:mx-0 text-gray-600 text-sm ">
+                    Share your knowledge, inspire learners, and earn with ease! Join our platform as a teacher, create engaging courses, and reach students worldwide. Empower others while growing your expertise—start your teaching journey today!
                     </p>
                     <button onClick={()=>{navigate('/teacherReq')}} className="btn text-white bg-gray-800 py-2 px-4 rounded-lg">
                         Start Teaching Today

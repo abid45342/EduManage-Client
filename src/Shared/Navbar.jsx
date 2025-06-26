@@ -28,7 +28,7 @@ const Navbar = () => {
     <> 
     <li className='font-semibold'><Link to="/">Home</Link></li>
       <li className='font-semibold'><Link  to="/allClasses">All Classes</Link></li>
-{user&&       <li className='font-semibold'><Link to="/teacherReq">Teach on EduManage</Link></li>}
+{user&&       <li className='font-semibold '><Link to="/teacherReq">Teach on EduManage</Link></li>}
       
       </>
   )
@@ -103,7 +103,7 @@ const Navbar = () => {
 
 
                 </li>
-                <li className=" rounded-xl px-4 py-2 hover:bg-gray-100">
+                <li className=" rounded-xl px-4 py-2 hover:bg-gray-100 ">
                   <button onClick={handleLogOut} className="w-full text-left">
                     Logout
                   </button>

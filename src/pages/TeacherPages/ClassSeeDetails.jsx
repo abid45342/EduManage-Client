@@ -11,7 +11,28 @@ import useAxiosSecure from '../../hooks/useAxiosSecure';
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import Swal from 'sweetalert2';
 
+import {AdvancedImage} from '@cloudinary/react';
+import {fill} from "@cloudinary/url-gen/actions/resize";
+import { Cloudinary } from '@cloudinary/url-gen/index';
+import UploadVideo from '../../components/UploadVideo';
+import ShowVideos from '../../components/ShowVideos';
 const ClassSeeDetails = () => {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const axiosSecure = useAxiosSecure();
   const queryClient = useQueryClient();
   const [isModalOpen, setModalOpen] = useState(false);
@@ -103,6 +124,12 @@ const ClassSeeDetails = () => {
         </button>
       </div>
 
+      {/* <div className='mt-6'> 
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/p3rhowTnKZ4?si=jR-yHJ6EvWWVYx-Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/p3rhowTnKZ4?si=jR-yHJ6EvWWVYx-Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+      </div> */}
+
       {/* Modal for Creating Assignment */}
       {isModalOpen && (
         <div className="modal modal-open">
@@ -148,13 +175,28 @@ const ClassSeeDetails = () => {
                 <button type="submit" className="btn btn-primary">
                   Add Assignment
                 </button>
+               
               </div>
             </form>
           </div>
         </div>
       )}
+        {/* <UploadVideo cls_id={classDetails._id}></UploadVideo> */}
+       <ShowVideos cls_id={classDetails._id}></ShowVideos>
     </div>
   );
 };
 
 export default ClassSeeDetails;
+
+
+
+
+
+
+
+
+
+
+
+

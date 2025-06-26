@@ -61,10 +61,10 @@ const Banner = () => {
         <div className="banner-container w-full overflow-hidden">
             <Slider {...settings}>
                 <div>
-                    <img src={banner} alt="Banner 1" className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover" />
+                    <img src={banner1} alt="Banner 1" className="w-full h-[300px] sm:h-[400px] md:h-[500px] " />
                 </div>
                 <div>
-                    <img src={banner1} alt="Banner 2" className="w-full h-[300px] sm:h-[400px] md:h-[500px]  " />
+                    <img src={banner1} alt="Banner 2" className="  w-full h-[300px] sm:h-[400px] md:h-[500px]  " />
                 </div>
                 {/* <div>
                     <img src={banner3} alt="Banner 3" className="w-full h-[300px] sm:h-[400px] md:h-[500px] object-cover" />

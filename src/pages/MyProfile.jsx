@@ -36,6 +36,8 @@ console.log(role)
             <div className="mt-4 space-y-2">
                 <p ><strong>Email:</strong> {user.email || 'Not Available'}</p>
                 <p><strong>Phone:</strong> { '01674967584'}</p>
+              
+                <p><strong>address:</strong> { 'Dhaka,Bangladesh'}</p>
                
             </div>
         </div>
