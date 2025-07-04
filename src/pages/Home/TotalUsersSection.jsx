@@ -1,119 +1,24 @@
-// import React from 'react';
-// import { useQuery } from '@tanstack/react-query';
-// import useAxiosPublic from '../../hooks/useAxiosPublic'; // Make sure the path is correct
-
-// // Fetch users data
-// const TotalUsersSection = () => {
-//     const axiosPublic = useAxiosPublic();
-
-//     const fetchUsers = async () => {
-//         const response = await axiosPublic.get('/usersH'); // Adjust with your API endpoint
-//         return response.data; // Assuming data is an array of users
-//     };
-
-//     // Fetch classes data, filtering only "accepted" classes
-//     const fetchClasses = async () => {
-//         const response = await axiosPublic.get('/classesH'); // Adjust with your API endpoint
-//         return response.data.filter(classItem => classItem.status === 'accepted'); // Filter "accepted" classes
-//     };
-
-//     // Fetch enrollments data
-//     const fetchEnrollments = async () => {
-//         const response = await axiosPublic.get('/enrollmentsH'); // Adjust with your API endpoint
-//         return response.data; // Assuming data is an array of enrollments
-//     };
-
-//     // Use React Query to fetch data with v5 format
-//     const { data: usersData, isLoading: isLoadingUsers, isError: isErrorUsers } = useQuery({
-//         queryKey: ['users'],
-//         queryFn: fetchUsers,
-//     });
-//     const { data: classesData, isLoading: isLoadingClasses, isError: isErrorClasses } = useQuery({
-//         queryKey: ['classes'],
-//         queryFn: fetchClasses,
-//     });
-//     const { data: enrollmentsData, isLoading: isLoadingEnrollments, isError: isErrorEnrollments } = useQuery({
-//         queryKey: ['enrollments'],
-//         queryFn: fetchEnrollments,
-//     });
-
-//     // Loading State
-//     if (isLoadingUsers || isLoadingClasses || isLoadingEnrollments) {
-//         return <div className="text-center">Loading data... Please wait.</div>; // Display loading state until data is fetched
-//     }
-
-//     // Error Handling
-//     if (isErrorUsers || isErrorClasses || isErrorEnrollments) {
-//         return <div className="text-center text-red-500">There was an error fetching the data.</div>;
-//     }
-
-//     const totalUsers = usersData.length;
-//     const totalClasses = classesData.length;
-//     const totalEnrollments = enrollmentsData.length;
-
-//     return (
-//         <div className="flex items-center justify-between p-10  gap-5">
-//             {/* Left side: Info Cards */}
-//             <div className="w-1/2  flex flex-col justify-between justify-items-between "> 
-//                 <div className="bg-white p-6 rounded-lg shadow-lg mb-4">
-//                     <h3 className="text-xl font-semibold text-gray-800">Total Users</h3>
-//                     <p className="text-gray-600 text-2xl mt-2">{totalUsers}</p>
-//                 </div>
-//                 <div className="bg-white p-6 rounded-lg shadow-lg mb-4">
-//                     <h3 className="text-xl font-semibold text-gray-800">Total Classes</h3>
-//                     <p className="text-gray-600 text-2xl mt-2">{totalClasses}</p>
-//                 </div>
-//                 <div className="bg-white p-6 rounded-lg shadow-lg mb-4">
-//                     <h3 className="text-xl font-semibold text-gray-800">Total Enrollments</h3>
-//                     <p className="text-gray-600 text-2xl mt-2">{totalEnrollments}</p>
-//                 </div>
-//             </div>
-
-//             {/* Right side: Image */}
-//             <div className="w-1/2">
-//                 <img
-//                     src="https://i.ibb.co.com/kS2GzJX/image.png" // Add an appropriate image here
-//                     alt="Website image"
-//                     className="w-full h-full object-cover rounded-lg shadow-lg"
-//                 />
-//             </div>
-//         </div>
-//     );
-// };
-
-// export default TotalUsersSection;
-
-
-
-
-
-
 import React from 'react';
 import { useQuery } from '@tanstack/react-query';
-import useAxiosPublic from '../../hooks/useAxiosPublic'; // Make sure the path is correct
+import useAxiosPublic from '../../hooks/useAxiosPublic';
+import { FaUsers, FaChalkboardTeacher, FaUserCheck } from 'react-icons/fa';
 
-// Fetch users data
 const TotalUsersSection = () => {
     const axiosPublic = useAxiosPublic();
 
     const fetchUsers = async () => {
-        const response = await axiosPublic.get('/usersH'); // Adjust with your API endpoint
-        return response.data; // Assuming data is an array of users
+        const response = await axiosPublic.get('/usersH');
+        return response.data;
     };
-
-    // Fetch classes data, filtering only "accepted" classes
     const fetchClasses = async () => {
-        const response = await axiosPublic.get('/classesH'); // Adjust with your API endpoint
-        return response.data.filter(classItem => classItem.status === 'accepted'); // Filter "accepted" classes
+        const response = await axiosPublic.get('/classesH');
+        return response.data.filter(classItem => classItem.status === 'accepted');
     };
-
-    // Fetch enrollments data
     const fetchEnrollments = async () => {
-        const response = await axiosPublic.get('/enrollmentsH'); // Adjust with your API endpoint
-        return response.data; // Assuming data is an array of enrollments
+        const response = await axiosPublic.get('/enrollmentsH');
+        return response.data;
     };
 
-    // Use React Query to fetch data with v5 format
     const { data: usersData, isLoading: isLoadingUsers, isError: isErrorUsers } = useQuery({
         queryKey: ['users'],
         queryFn: fetchUsers,
@@ -127,14 +32,11 @@ const TotalUsersSection = () => {
         queryFn: fetchEnrollments,
     });
 
-    // Loading State
     if (isLoadingUsers || isLoadingClasses || isLoadingEnrollments) {
-        return <div className="text-center">Loading data... Please wait.</div>; // Display loading state until data is fetched
+        return <div className="text-center py-16">Loading data... Please wait.</div>;
     }
-
-    // Error Handling
     if (isErrorUsers || isErrorClasses || isErrorEnrollments) {
-        return <div className="text-center text-red-500">There was an error fetching the data.</div>;
+        return <div className="text-center text-red-500 py-16">There was an error fetching the data.</div>;
     }
 
     const totalUsers = usersData.length;
@@ -142,32 +44,50 @@ const TotalUsersSection = () => {
     const totalEnrollments = enrollmentsData.length;
 
     return (
-        <div className="flex flex-col lg:flex-row items-center justify-between p-10 gap-5">
-            {/* Left side: Info Cards */}
-            <div className="w-full lg:w-1/2 flex flex-col justify-between gap-4"> 
-                <div className="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 className="text-xl font-semibold text-gray-800">Total Users</h3>
-                    <p className="text-gray-600 text-2xl mt-2">{totalUsers}</p>
+        <section className="py-20 px-4 sm:px-8 lg:px-16 bg-gradient-to-br from-orange-50 via-white to-red-50">
+            <div className="max-w-screen-xl mx-auto">
+                {/* Header Section */}
+                <div className="text-center mb-16">
+                    <h2 className="text-4xl font-bold bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent mb-4">
+                        Platform Impact
+                    </h2>
+                    <p className="text-gray-600 text-lg max-w-2xl mx-auto">
+                        See how our platform is growing and making a difference for learners and educators.
+                    </p>
                 </div>
-                <div className="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 className="text-xl font-semibold text-gray-800">Total Classes</h3>
-                    <p className="text-gray-600 text-2xl mt-2">{totalClasses}</p>
-                </div>
-                <div className="bg-white p-6 rounded-lg shadow-lg">
-                    <h3 className="text-xl font-semibold text-gray-800">Total Enrollments</h3>
-                    <p className="text-gray-600 text-2xl mt-2">{totalEnrollments}</p>
-                </div>
-            </div>
 
-            {/* Right side: Image */}
-            <div className="w-full lg:w-1/2 mt-4 lg:mt-0">
-                <img
-                    src="https://i.ibb.co.com/kS2GzJX/image.png" // Add an appropriate image here
-                    alt="Website image"
-                    className="w-full h-full object-cover rounded-full shadow-lg"
-                />
+                {/* Stats Cards Grid */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    {/* Users */}
+                    <div className="bg-white rounded-2xl shadow-xl border border-orange-100 flex flex-col items-center p-8 hover:shadow-2xl transition-all duration-300">
+                        <div className="bg-gradient-to-br from-orange-500 to-red-500 p-4 rounded-full mb-4 shadow-lg">
+                            <FaUsers className="text-3xl text-white" />
+                        </div>
+                        <h3 className="text-lg font-semibold text-gray-700 mb-1">Total Users</h3>
+                        <p className="text-3xl font-extrabold text-orange-600 mb-1">{totalUsers}</p>
+                        <span className="text-xs text-gray-500">Registered</span>
+                    </div>
+                    {/* Classes */}
+                    <div className="bg-white rounded-2xl shadow-xl border border-orange-100 flex flex-col items-center p-8 hover:shadow-2xl transition-all duration-300">
+                        <div className="bg-gradient-to-br from-orange-400 to-red-400 p-4 rounded-full mb-4 shadow-lg">
+                            <FaChalkboardTeacher className="text-3xl text-white" />
+                        </div>
+                        <h3 className="text-lg font-semibold text-gray-700 mb-1">Total Classes</h3>
+                        <p className="text-3xl font-extrabold text-orange-500 mb-1">{totalClasses}</p>
+                        <span className="text-xs text-gray-500">Accepted</span>
+                    </div>
+                    {/* Enrollments */}
+                    <div className="bg-white rounded-2xl shadow-xl border border-orange-100 flex flex-col items-center p-8 hover:shadow-2xl transition-all duration-300">
+                        <div className="bg-gradient-to-br from-red-400 to-orange-500 p-4 rounded-full mb-4 shadow-lg">
+                            <FaUserCheck className="text-3xl text-white" />
+                        </div>
+                        <h3 className="text-lg font-semibold text-gray-700 mb-1">Total Enrollments</h3>
+                        <p className="text-3xl font-extrabold text-red-500 mb-1">{totalEnrollments}</p>
+                        <span className="text-xs text-gray-500">Completed</span>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
     );
 };
 
